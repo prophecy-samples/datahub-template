@@ -1,0 +1,52 @@
+name: testKiranProject
+description: ''
+version: 0.0.1
+author: kiranadmin@prophecy.io
+language: python
+buildSystem: ''
+buildSystemDetails:
+  artefactID: testkiranproject
+  parentArtefactID: ''
+  buildSystem: wheel
+  author: null
+  createdAt: '2023-09-20 06:28:21'
+pipelines: {}
+datasets: {}
+templates: {}
+jobs: {}
+gemContainer:
+  languageVersion: ''
+  gemLibsVersion: ''
+  gems: {}
+functions:
+  author: null
+  createdAt: '2023-09-20 06:28:21'
+  udfs: {}
+  udafs: {}
+  expressions: {}
+subgraphs: {}
+sqlModels: {}
+sqlMacros: {}
+sqlSeeds: {}
+sqlSources: {}
+sqlUnreferencedSources: {}
+sqlPipeline: null
+dependencies: '[]'
+projectDependencies:
+  '34936':
+    projectUID: 34936
+    projectName: ProphecyWarehousePython
+    repositoryPath: gitUri=http://gitserver:3000/wD3Rheoe_team_8768/wD3Rheoe_project_34936.git&subPath=
+    version: 0.0.1
+    isDefault: true
+    author: null
+    createdAt: '2023-09-20 06:27:26'
+  '34935':
+    projectUID: 34935
+    projectName: ProphecySparkBasicsPython
+    repositoryPath: gitUri=http://gitserver:3000/wD3Rheoe_team_8768/wD3Rheoe_project_34935.git&subPath=
+    version: 0.0.3
+    isDefault: true
+    author: null
+    createdAt: '2023-09-20 06:27:26'
+pipelineConfigurations: {}
