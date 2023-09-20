@@ -98,12 +98,20 @@ sqlUnreferencedSources: {}
 sqlPipeline: null
 dependencies: '[]'
 projectDependencies:
-  '34935':
-    projectUID: 34935
+  '289':
+    projectUID: 289
     projectName: ProphecySparkBasicsPython
-    repositoryPath: gitUri=http://gitserver:3000/wD3Rheoe_team_8768/wD3Rheoe_project_34935.git&subPath=
+    repositoryPath: gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_289.git&subPath=
     version: 0.0.3
     isDefault: false
     author: null
-    createdAt: '2023-09-19 00:38:51'
+    createdAt: '2023-09-19 19:06:45'
+  '290':
+    projectUID: 290
+    projectName: ProphecyWarehousePython
+    repositoryPath: gitUri=http://gitserver:3000/u7TxoglX_team_26/4VDU3KKT_project_290.git&subPath=
+    version: 0.0.1
+    isDefault: true
+    author: null
+    createdAt: '2023-09-20 05:28:01'
 pipelineConfigurations: {}

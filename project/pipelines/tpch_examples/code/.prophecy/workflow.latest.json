@@ -6,14 +6,14 @@
     "id" : "1",
     "uri" : "pipelines/tpch_examples",
     "language" : "python",
-    "fabricId" : "5558",
+    "fabricId" : "40",
     "frontEndLanguage" : "sql",
     "mode" : "batch",
     "udfs" : {
       "language" : "python",
       "udfs" : [ ],
       "functionPackageName" : "prophecysamples.datahubtemplate.functions",
-      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions" ]
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions" ]
     },
     "udafs" : {
       "language" : "python",
@@ -40,8 +40,12 @@
     "buildSystem" : "maven",
     "externalDependencies" : [ ],
     "dependentProjectExternalDependencies" : [ {
-      "projectUID" : "34935",
+      "projectUID" : "289",
       "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "290",
+      "projectName" : "ProphecyWarehousePython",
       "externalDependencies" : [ ]
     } ],
     "isImported" : false,
@@ -97,128 +101,10 @@
       "ports" : {
         "inputs" : [ {
           "id" : "AjcS91Cq9YQo2PzUOdLe3$$1SVgDdOfMehpar0bC3ZO3",
-          "slug" : "in0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "c_custkey",
-              "type" : "long",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "unique id",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "c_name",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "null",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "c_address",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "null",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "c_nationkey",
-              "type" : "long",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "null",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "c_phone",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "null",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "c_acctbal",
-              "type" : "decimal(10,0)",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "null",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "c_mktsegment",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "null",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "c_comment",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "null",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
+          "slug" : "in0"
         }, {
           "id" : "xReiDHop548AYXX43OUbU$$HAeONQT6NMuyu4-HzDdOz",
-          "slug" : "in1",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "n_nationkey",
-              "type" : "long",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "null",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "n_name",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "null",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "n_regionkey",
-              "type" : "long",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "null",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "n_comment",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "null",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
+          "slug" : "in1"
         } ],
         "outputs" : [ {
           "id" : "1NrpO_uPv2sfQyzvNbjY4$$62z5upnBt5wbSSJeVLo8s",
@@ -329,8 +215,7 @@
         "headAlias" : "in0"
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/wD3Rheoe_team_8768/wD3Rheoe_project_34935.git&subPath=&tag=0.0.3&projectSubscriptionProjectId=34935&path=gems/Join",
-        "projectName" : "ProphecySparkBasicsPython"
+        "gemId" : "gitUri=http://gitserver:3000/wD3Rheoe_team_8768/wD3Rheoe_project_34935.git&subPath=&tag=0.0.3&projectSubscriptionProjectId=34935&path=gems/Join"
       }
     },
     "rw2zFqSMXsZ1qwXMuTOsv$$I8g8ykAC2qbCQoc3E2aZA" : {
@@ -376,93 +261,7 @@
       "ports" : {
         "inputs" : [ {
           "id" : "ZoRE1D--FYPP8f03ywlli$$DSMF0Q71W_2u1raA7IPIj",
-          "slug" : "in0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "c_custkey",
-              "type" : "long",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "unique id",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "c_name",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "null",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "c_address",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "null",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "c_nationkey",
-              "type" : "long",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "null",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "c_phone",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "null",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "c_acctbal",
-              "type" : "decimal(10,0)",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "null",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "c_mktsegment",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "null",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "c_comment",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "null",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "n_name",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "null",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
+          "slug" : "in0"
         } ],
         "outputs" : [ {
           "id" : "OA2-ZlHayQm7NpLFdp1SW$$prBh_Xu-GMjzYTQAnFZ_E",
@@ -500,8 +299,7 @@
         } ]
       },
       "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/wD3Rheoe_team_8768/wD3Rheoe_project_34935.git&subPath=&tag=0.0.3&projectSubscriptionProjectId=34935&path=gems/Aggregate",
-        "projectName" : "ProphecySparkBasicsPython"
+        "gemId" : "gitUri=http://gitserver:3000/wD3Rheoe_team_8768/wD3Rheoe_project_34935.git&subPath=&tag=0.0.3&projectSubscriptionProjectId=34935&path=gems/Aggregate"
       }
     },
     "lmWKv4-6Guylfy3dX992_$$dXTIa01JhTGeTX5kukUVS" : {
@@ -520,30 +318,7 @@
       "ports" : {
         "inputs" : [ {
           "id" : "H6vRN8ySbfDiXkxuMO3pH$$d5vPGn6K57ik5rhfdnFhu",
-          "slug" : "in0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "nation_name",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "null",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "num_customers",
-              "type" : "long",
-              "nullable" : false,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
+          "slug" : "in0"
         } ],
         "outputs" : [ ],
         "selectedInputFields" : [ ],
@@ -588,5 +363,102 @@
     "selectedInputFields" : [ ],
     "isCustomOutputSchema" : false,
     "autoUpdateOnRun" : false
-  }
+  },
+  "diagnostics" : [ {
+    "property" : "$.workflow.processes.Hfi0RJEvKiivjDBqjdP5L$$l-KXwHqWqfNNAGXZTkXnY.properties.format",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "format: DatahubTable not supported",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.rw2zFqSMXsZ1qwXMuTOsv$$I8g8ykAC2qbCQoc3E2aZA.properties.format",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "format: DatahubTable not supported",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.mWAeD7s9ltk6G1PvaVXRX$$wX5xa5O-2A5ORjj5nErVH",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Could not find the spec for Join",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.ozK1AZfUVU3aHVe5T3Z9B$$RaO5FaFUS9D1g5y3jZzUQ",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Could not find the spec for Aggregate",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.lmWKv4-6Guylfy3dX992_$$dXTIa01JhTGeTX5kukUVS",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.lmWKv4-6Guylfy3dX992_$$dXTIa01JhTGeTX5kukUVS.properties.format",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "format: DatahubTable not supported",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  } ]
 }

@@ -8,11 +8,7 @@ from prophecy.utils import *
 from tpch_examples.graph import *
 
 def pipeline(spark: SparkSession) -> None:
-    df_tpch_nation = tpch_nation(spark)
-    df_tpch_customer = tpch_customer(spark)
-    df_JoinNation = JoinNation(spark, df_tpch_customer, df_tpch_nation)
-    df_num_customers_by_nation_name = num_customers_by_nation_name(spark, df_JoinNation)
-    country_customer_report(spark, df_num_customers_by_nation_name)
+    pass
 
 def main():
     spark = SparkSession.builder\
