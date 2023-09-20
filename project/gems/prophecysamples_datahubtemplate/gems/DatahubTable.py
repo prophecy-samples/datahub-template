@@ -12,7 +12,7 @@ import requests, json, traceback
 
 class DatahubTableFormat(DatasetSpec):
     name: str = "DatahubTable"
-    datasetType: str = "Database"
+    datasetType: str = "Database" 
     mode: str = "batch"
 
     def optimizeCode(self) -> bool:
