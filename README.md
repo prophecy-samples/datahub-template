@@ -1,6 +1,6 @@
 # datahub-template
 
-This project shows how easy it is to integrate the datahub schema registry for us in spark and prophecy. It features two main functions:
+This project shows how easy it is to integrate the datahub schema registry for use in spark and prophecy. It features two main functions:
 
 1. **browse datasets** - Browse and select existing datasets listed in datahub, synchronizing schema and other metadata. 
 2. **sync dataset** - If you want to save dataset details to datahub, simply click "Sync To Datahub" to sync schema, descriptions and other metadata to datahub.
