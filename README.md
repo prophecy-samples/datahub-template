@@ -21,13 +21,10 @@ Set these to appropriate values:
 ```
 
 ### 2. Create a DatahubTable source/target.
-![create-small](https://github.com/prophecy-samples/datahub-template/assets/2001660/c3bf9399-dd6f-4680-959d-5423fdb2669e)
-
+![create-small](https://github.com/prophecy-samples/datahub-template/assets/2001660/2c710891-0649-4c4d-8cd9-33d5230023a5)
 
 ### 3. Browse existing tables saved to Datahub.
-
-![select-datahub](https://github.com/prophecy-samples/datahub-template/assets/2001660/fcc8ca22-c2c5-485b-93f5-b600a0cf5bf1)
+![select-datahub](https://github.com/prophecy-samples/datahub-template/assets/2001660/4f2e7003-3931-4260-9df9-152a56614c39)
 
 ### 4. Sync changes when there's an update.
-
-![sync_to_datahub](https://github.com/prophecy-samples/datahub-template/assets/2001660/7e107d95-7b8b-4de6-b959-edd1e795a622)
+![sync_to_datahub](https://github.com/prophecy-samples/datahub-template/assets/2001660/bb78fd5b-879e-4bcf-8047-68deb15ee823)
